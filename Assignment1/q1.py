@@ -16,12 +16,11 @@ for i in  squares:
     print(i)
 
 #Part 1(c)
-alpha=[]
-letter='a'
-for i in range (a,z):
-    letter=letter+1
-    for j in range (1,i+1):
-        alpha.append(letter)
+alpha = []
+for i in range(1, 27):
+    letter = chr(96 + i)  # Convert the letter index to its ASCII equivalent
+    alpha.append(letter * i)  
 
-for i in alpha:
-    print(i)
+for line in alpha:  
+    print(line)
+

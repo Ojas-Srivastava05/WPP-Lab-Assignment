@@ -1,40 +1,33 @@
-#solution 1 is to import the random module of python
 import random
-value=0
-digcounter=0
-while True:
-    i=random.randint(0,1)
-    value=value*10+i
-    digcounter+=1
-    if digcounter>100:
-        break
-    
-value=list[value]
+digcount=0
+value=[]
+while digcount<100:
+    value.append(random.randint(0,1))
+    digcount+=1
 
-print(value)
+
 countzero=0
 countone=0
 longest=0
 flag=0
-dummy=value
-digit=0
-while True:
-    digit=value%10
-    value=value/10
-    digcounter-=1
-    if digit==1:
-        countone+=1
-
-    elif digit==0:
+for i in range (100):
+    if value[i]==0:
         countzero+=1
-    
-    if digcounter<0:
-        break
+        countone=0
+        if countzero>longest:
+            longest=countzero
+            flag=0
 
-if flag==0 :
-    print(f"THE LONGEST RUN OF ZEROES IN {dummy} IS {longest}")
+    if value[i]==1:
+        countone+=1
+        countzero=0
+        if countone>=longest:
+            longest=countone
+            flag=1
 
-if flag==1 :
-    print(f"THE LONGEST RUN OF ONES IN {dummy} IS {longest}")
-        
+print(f"THE GENERATED BINARY NUMBER IS {value}",sep="")
 
+if flag==0:
+    print(f"THE LONGEST CONSECUTIVE OCCURENCE OF ZERO IS {longest}")
+if flag==1:
+    print(f"THE LONGEST CONSECUTIVE OCCURENCE OF ONE IS {longest}")
