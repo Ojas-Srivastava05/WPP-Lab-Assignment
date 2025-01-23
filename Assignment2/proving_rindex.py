@@ -1,13 +1,11 @@
 def indexfunction(sentence,letter):
-    new_word=""
     value=0
     for i in range(len(sentence),len(letter)-1,-1):
         for k in range(len(letter)):
-            
-            
-            
+            print(sentence(k))
 
-    
+            
+            
 
 def main():
     string=input("Enter the main string ")

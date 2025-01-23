@@ -9,14 +9,12 @@ while True:
 print(menu)
 
 while True: 
-    
-    for key,value in menu.items():
         check=input("enter the item you want to find in the dictionary enter q to quit")
-        if key==check:
-            print(key,value)
+        if check in menu:
+            print(f"Item found {check}:{menu[check]}")
         if check=='q' or check== 'Q':
             break
-        else:
+        elif not check in menu:
             print("ITEM NOT FOUND")
         
 
