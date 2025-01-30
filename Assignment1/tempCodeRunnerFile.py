@@ -1,1 +1,1 @@
-ltotal.sort()
+        countzero+=1
