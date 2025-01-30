@@ -16,5 +16,3 @@ while True:
             break
         elif not check in menu:
             print("ITEM NOT FOUND")
-        
-
