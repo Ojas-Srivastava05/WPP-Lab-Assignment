@@ -31,12 +31,12 @@ def replace(input_string, search_string, replace_string, start, end):
     new_string += input_string[end:]
     print(f"New string is: {new_string}")
 
-def rfind_index(input_string, search_string, start, end):
-    index = -1
-    for i in range(end - len(search_string), start - 1, -1):
-        if input_string[i:i+len(search_string)] == search_string:
-            index = i
-            break
+def rfind_index(input_string, search_string, start=0, end=None):
+    if end is None:
+        end = len(input_string)  # Default to full length if not specified
+
+    index = input_string.rfind(search_string, start, end)
+
     if index == -1:
         print("String not found in the input string.")
     else:
