@@ -12,6 +12,8 @@ def panagram(sen):
         return False
     else:
         for letter in sentence:
+            if letter.isdigit():
+                continue
             if letter==char:
                 char=chr(ord(char)+1)
                 continue
