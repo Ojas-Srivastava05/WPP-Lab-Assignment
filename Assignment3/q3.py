@@ -1,19 +1,23 @@
-def utopiantree(n):
-    length=1
-    num=n
-    for i in range (1,num+1):
-        if i%2==1:
-            length=length*2
-        else:
-            length=length+1
-    return length
+import math
+
+def is_perfect_square(x):
+    s = int(math.sqrt(x))
+    return s * s == x
+
+def is_fibonacci(n):
+    if is_perfect_square(5 * n * n + 4) or is_perfect_square(5 * n * n - 4):
+        return "IsFibo"
+    else:
+        return "IsNotFibo"
 
 def main():
-    test=int(input("Enter the number of test cases"))
-    for i in range (1,test+1):
-        n=int(input("Enter the number of cycles"))
-        print(utopiantree(n))
-                
-if __name__=='__main__':
-     main()
-    
+    t = int(input("Enter the number of test cases: "))
+    results = []
+    for _ in range(t):
+        n = int(input("Enter the number you want to check: "))
+        results.append(is_fibonacci(n))
+
+    print("\n".join(results))
+
+if __name__ == '__main__':
+    main()
