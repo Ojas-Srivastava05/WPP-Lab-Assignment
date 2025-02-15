@@ -1,30 +1,27 @@
 #bigger is greater
-def bigisgreater(sentence):
-    count=1
-    result=[]
-    for i in range(0,len(sentence)):#list index
-        for j in range(len(sentence[i]),-1.-1):#selection loop
-            for k in range(len(sentence[i])-1,-1,count):#comparison loop
-                if sentence[j]>sentence[k]:
-                    temp=sentence[i]
-                    sentence[i]=sentence[j]
-                    sentence[j]=temp
-                    result.append(sentence[i])
-                else:
-                    count+=1
-                    
-                    
-                
+def next_permutation(w):
+    def all_permutations(s, step=0, result=set()):
+        if step == len(s):
+            result.add("".join(s))
+        for i in range(step, len(s)):
+            s[step], s[i] = s[i], s[step]
+            all_permutations(s[:], step + 1, result)
+            s[step], s[i] = s[i], s[step]
+        return sorted(result)
+    
+    perms = all_permutations(list(w))
+    for perm in perms:
+        if perm > w:
+            return perm
+    return "no answer"
 
 def main():
-    t=int(input("Enter the number of test cases"))
-    sentence=[]
-    for i in range(0,t):
-        sen=input("Enter the sentence")
-        sentence.append(sen)
-        
-    print(bigisgreater(sentence))
-    
-if __name__=='__main__':
+    t = int(input().strip())
+    results = []
+    for _ in range(t):
+        w = input().strip()
+        results.append(next_permutation(w))
+    print("\n".join(results))
+
+if __name__ == "__main__":
     main()
-        
