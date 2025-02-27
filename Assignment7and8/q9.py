@@ -16,8 +16,12 @@ def hindi_tokenizer(text):
     return tokens
 
 def main():
-    user_input = input("Enter Hindi text: ")
-    tokens = hindi_tokenizer(user_input)
+    print("This tokenizer extracts various tokens from Hindi text, including URLs, emails, dates, numbers, usernames, punctuation, and words.")
+    user_input = input("Enter Hindi text (or press Enter to exit): ")
+    if not user_input.strip():
+        print("No input provided. Exiting.")
+        return
+    tokens = hindi_tokenizer(user_input)    
     print(tokens)
 
 if __name__ == "__main__":
