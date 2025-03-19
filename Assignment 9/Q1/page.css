@@ -1,0 +1,139 @@
+
+.food-container {
+    position: relative; 
+    width: 100%; 
+    text-align: center; 
+}
+#Foodimage {
+    height: 500px;
+    width: 100%; 
+    display: block;
+    opacity: 0.65; 
+}
+.gradient-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    background: linear-gradient(to right, rgba(10, 10, 10, 1), rgba(150, 0, 0, 1));
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(to right, rgba(150, 0, 0, 1), rgba(10, 10, 10, 1));
+    transform: scale(1.05);
+}
+.search-box{
+    position: absolute;
+    top: 400px;
+    left: 575px;
+    width: 500px;
+}
+.heading{
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 250px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: whitesmoke;
+    background: linear-gradient(to right, rgba(10, 10, 10, 1), rgba(150, 0, 0, 1));
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+    
+    display: inline-block;  
+    padding: 0; 
+
+}
+.description{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    top: 320px;
+    left: 530px;
+    font-weight: bold;
+    font-weight: bolder;
+    font-size: 25px;
+    background: linear-gradient(to right, rgba(10, 10, 10, 1), rgba(150, 0, 0, 1));
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent; 
+    
+
+}
+
+.image-text {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    width: 250px;
+}
+
+/* Adjust text positions below each image */
+#bowl-text {
+    top: 870px;  /* Position below #bowl */
+    left: 50px;
+}
+
+#meal-text {
+    top: 870px;  
+    left: 500px;
+}
+
+#club-text {
+    top: 870px;  
+    left: 950px;
+}
+
+#wine-text {
+    top: 870px;  
+    left: 1400px;
+}
+
+#bowl
+{
+    position:absolute;
+    top: 600px;
+    left: 50px;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #333;
+}
+
+#meal
+{
+    position:absolute;
+    top: 600px;
+    left: 500px;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #333;
+}
+
+#club{
+    position:absolute;
+    top: 600px;
+    left: 950px;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #333;
+}
+
+#wine{
+    position:absolute;
+    top: 600px;
+    left: 1400px;
+    width: 250px;
+    height: 250px;
+    border: 3px solid #333;
+    
+}
