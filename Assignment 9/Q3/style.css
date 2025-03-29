@@ -1,7 +1,7 @@
 * {
   margin: 0;
   font-family: Arial;
-  border: border-box; /* height and width should be in the that only*/
+  border: border-box; 
 }
 .navbar {
   height: 60px;
